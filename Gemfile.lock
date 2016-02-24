@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/rom-rb/rom-mongo.git
+  revision: 9a755fd38621b535c2b398265f95db8dc849ee8c
+  branch: master
+  specs:
+    rom-mongo (0.1.0)
+      mongo (~> 2.0.0)
+      origin
+      rom (~> 1.0.0.beta2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,6 +52,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bson (3.2.6)
     builder (3.2.2)
     capybara (2.6.2)
       addressable
@@ -50,12 +61,14 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    charlatan (0.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    dry-equalizer (0.2.0)
     equalizer (0.0.11)
     erubis (2.7.0)
     fabrication (2.14.1)
@@ -82,10 +95,13 @@ GEM
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    mongo (2.0.6)
+      bson (~> 3.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    origin (2.2.0)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -118,6 +134,33 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
+    rom (1.0.0)
+      dry-equalizer (~> 0.2)
+      rom-mapper (~> 0.3.0)
+      rom-support (~> 1.0.0)
+    rom-mapper (0.3.0)
+      dry-equalizer (~> 0.2)
+      rom-support (~> 1.0.0)
+      transproc (~> 0.4.0)
+    rom-model (0.2.0)
+      activemodel (>= 3.0, < 5.0)
+      charlatan (~> 0.1)
+      dry-equalizer (~> 0.2)
+      i18n
+      rom-support (~> 1.0.0)
+      virtus (~> 1.0, >= 1.0.5)
+    rom-rails (0.6.0)
+      addressable (~> 2.3)
+      charlatan (~> 0.1)
+      dry-equalizer (~> 0.2)
+      railties (>= 3.0, < 5.0)
+      rom (~> 1.0.0)
+      rom-model (~> 0.2.0)
+      virtus (~> 1.0, >= 1.0.5)
+    rom-support (1.0.0)
+      dry-equalizer (~> 0.2)
+      transproc (~> 0.4.0)
+      wisper (~> 1.6, >= 1.6.0)
     rspec-core (3.4.3)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -144,6 +187,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
+    transproc (0.4.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     virtus (1.0.5)
@@ -151,6 +195,7 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    wisper (1.6.1)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -162,4 +207,7 @@ DEPENDENCIES
   fabrication (~> 2.0)
   grape (~> 0.14)
   rails (= 4.2.1)
+  rom (~> 1.0)
+  rom-mongo!
+  rom-rails (~> 0.6)
   rspec-rails (~> 3.0)
