@@ -12,3 +12,7 @@ group :test do
   gem 'capybara', '~> 2.4'
   gem 'fabrication', '~> 2.0'
 end
+
+group :development, :production do
+  gem 'grape', '~> 0.14'
+end
