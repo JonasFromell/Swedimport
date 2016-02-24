@@ -18,6 +18,8 @@ group :development, :production do
 
   # Persistance
   gem 'rom', '~> 1.0'
-  gem 'rom-rails', '~> 0.6'
   gem 'rom-mongo', git: 'https://github.com/rom-rb/rom-mongo.git', branch: 'master'
+
+  # Dependency injection
+  gem 'dry-component', git: 'https://github.com/dryrb/dry-component.git', branch: 'master'
 end

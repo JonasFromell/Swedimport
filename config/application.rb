@@ -26,6 +26,13 @@ module Swedimport
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Require the application container
+    require Rails.root.join('core/boot')
+
+    def container
+      Swedimport::Container
+    end
+
     # Automatically load libraries in `lib`
     config.autoload_paths << Rails.root.join('lib')
   end

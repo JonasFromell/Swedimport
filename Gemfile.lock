@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/dryrb/dry-component.git
+  revision: 56f64864637d432679ca3ee0abfebb0fec1a4461
+  branch: master
+  specs:
+    dry-component (0.0.2)
+      dry-auto_inject (~> 0.1)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.2, >= 0.2.7)
+      inflecto (>= 0.0.2)
+
+GIT
   remote: https://github.com/rom-rb/rom-mongo.git
   revision: 9a755fd38621b535c2b398265f95db8dc849ee8c
   branch: master
@@ -61,13 +72,18 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    charlatan (0.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    dry-auto_inject (0.2.0)
+    dry-configurable (0.1.3)
+      thread_safe
+    dry-container (0.2.8)
+      dry-configurable (~> 0.1, >= 0.1.3)
+      thread_safe
     dry-equalizer (0.2.0)
     equalizer (0.0.11)
     erubis (2.7.0)
@@ -87,6 +103,7 @@ GEM
     hashie (3.4.3)
     i18n (0.7.0)
     ice_nine (0.11.2)
+    inflecto (0.0.2)
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -142,21 +159,6 @@ GEM
       dry-equalizer (~> 0.2)
       rom-support (~> 1.0.0)
       transproc (~> 0.4.0)
-    rom-model (0.2.0)
-      activemodel (>= 3.0, < 5.0)
-      charlatan (~> 0.1)
-      dry-equalizer (~> 0.2)
-      i18n
-      rom-support (~> 1.0.0)
-      virtus (~> 1.0, >= 1.0.5)
-    rom-rails (0.6.0)
-      addressable (~> 2.3)
-      charlatan (~> 0.1)
-      dry-equalizer (~> 0.2)
-      railties (>= 3.0, < 5.0)
-      rom (~> 1.0.0)
-      rom-model (~> 0.2.0)
-      virtus (~> 1.0, >= 1.0.5)
     rom-support (1.0.0)
       dry-equalizer (~> 0.2)
       transproc (~> 0.4.0)
@@ -204,10 +206,10 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (~> 2.4)
+  dry-component!
   fabrication (~> 2.0)
   grape (~> 0.14)
   rails (= 4.2.1)
   rom (~> 1.0)
   rom-mongo!
-  rom-rails (~> 0.6)
   rspec-rails (~> 3.0)
