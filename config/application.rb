@@ -26,9 +26,10 @@ module Swedimport
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Require the application container
+    # Require the boot procedure for the application container
     require Rails.root.join('core/boot')
 
+    # Return the application container
     def container
       Swedimport::Container
     end
